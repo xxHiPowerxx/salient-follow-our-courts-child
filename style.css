@@ -8,7 +8,157 @@ Template: salient
 Version: 1.0
 */
 
+:root {
+	--foc-theme-color: #08677d;
+}
+
+/*   STC   */
+.widget_stc_widget {
+  max-width: 600px;
+  margin: 60px auto;
+}
+.widget_stc_widget .stc-subscribe-wrapper,
+.widget_stc_widget .widgettitle,
+.widget_stc_widget h4 {
+  padding: 30px;
+}
+
+body.logged-in .stc-email-field {
+	display: none !important;
+}
+ul.stcUL li {
+  list-style: none;
+}
+.stc-categories-label-title:not(.stc-email-field .stc-categories-label-title) {
+  display: none;
+}
+.stc-subscribe-wrapper form > .stc-checkbox {
+  padding-top: .5em;
+  border-top: 1px solid rgb(51, 51, 51);
+  margin-top: .5em;
+  order: 99;
+  color: rgb(220, 53, 69);
+}
+.stc-subscribe-wrapper form {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+.stc-subscribe-wrapper form button {
+  margin-top: 1em;
+  order: 100;
+	margin-right: auto;
+}
+.stc-nested {
+  padding-left: 1em;
+}
+.stc-caret {
+  display: inline-block;
+}
+/*   /STC   */
+
+#sidebar .wp-block-search .wp-block-search__label {
+  display: block;
+}
+.widget_stc_widget .widgettitle,
+#sidebar .widget h4,
+#sidebar .wp-block-search .wp-block-search__label {
+  background-color: #08677d;
+  background-color: var(--foc-theme-color);
+  margin: 0;
+  color: white;
+  opacity: 1;
+}
+#sidebar .widget h4,
+#sidebar .wp-block-search .wp-block-search__label {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: inherit;
+}
+#sidebar .wp-block-search .wp-block-search__input {
+  border-color: rgba(0, 0, 0, .05);
+}
+
+.widget_stc_widget .stc-subscribe-wrapper,
+.widget_stc_widget .widgettitle,
+#sidebar .widget h4,
+#sidebar .widget h4 + *,
+#sidebar .wp-block-search .wp-block-search__label,
+#sidebar .wp-block-search__inside-wrapper  {
+  padding: 30px;
+}
+#sidebar .widget,
+.widget_stc_widget .stc-subscribe-wrapper,
+#sidebar .wp-block-search .wp-block-search__input {
+  background-color: white;
+  box-shadow: 0 .25em .25em rgba(0, 0, 0, 0.15);
+}
+#sidebar .widget_stc_widget .stc-subscribe-wrapper {
+  box-shadow: none;
+}
 
 
+.archive .page-header-bg-image:after {
+  -webkit-transition: background-color 3s ease 3s;
+  transition: background-color 3s ease 3s;
+}
+.archive .page-header-bg-image.loaded:after {
+  background-color: rgba(8, 103, 125, 0.8);
+}
 
-
+/*   RM Magic Popup/Nectar Social Sharing   */
+.rm-magic-popup[class*="rm-magic-popup"] {
+  bottom: 5%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+.rm-magic-popup-button[class*="rm-magic-popup-button"],
+.nectar-social.fixed[class*="nectar-social"] {
+  font-size: 55px;
+  width: 1em;
+  height: 1em;
+  right: 1em;
+}
+.rm-magic-popup-button[class*="rm-magic-popup-button"] {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nectar-social.fixed[class*="nectar-social"] {
+  font-size: 55px;
+  width: 1em;
+  height: 1em;
+  bottom: 5%;
+  margin-bottom: 1.5em;
+  right: 1em;
+}
+.nectar-social.fixed[class*="nectar-social"] > a {
+  font-size: inherit;
+  width: 1em;
+  height: 1em;
+  display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  padding: 0;
+}
+.csstransforms .rm-magic-popup .rm-popup-menu {
+  width: 200px;
+  position: absolute;
+  bottom: 100%;
+  right: 100%;
+  margin-right: 50%;
+}
+span.rm-magic-popup-close-button[class*="rm-magic-popup-close-button"] {
+  position: static;
+}
+/*   /RM Magic Popup/Nectar Social Sharing   */
