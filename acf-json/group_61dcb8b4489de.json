@@ -1,0 +1,45 @@
+{
+    "key": "group_61dcb8b4489de",
+    "title": "Extra Wishlist Member Settings",
+    "fields": [
+        {
+            "key": "field_61dcb8d14e985",
+            "label": "Maximum Words Per Story",
+            "name": "max_words_per_story",
+            "type": "number",
+            "instructions": "Set the Maximum Number of Words Per story before Wishlist Member Protects Posts. Only works on Posts.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 55,
+            "placeholder": "",
+            "prepend": "",
+            "append": "Words",
+            "min": 0,
+            "max": "",
+            "step": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "foc-site-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1641855383
+}

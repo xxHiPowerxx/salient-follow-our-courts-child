@@ -1,0 +1,345 @@
+{
+    "key": "group_61806316da745",
+    "title": "Email Blast Template",
+    "fields": [
+        {
+            "key": "field_618066d0edee4",
+            "label": "Header Image",
+            "name": "header_image",
+            "type": "image",
+            "instructions": "The Header Image at the top of the Email Template",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 750,
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_61806752edee5",
+            "label": "Email Body",
+            "name": "email_body_fc",
+            "type": "flexible_content",
+            "instructions": "Choose Whether to Add a <b>Story Category Title<\/b> or a <b>Story<\/b>",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_6180678580038": {
+                    "key": "layout_6180678580038",
+                    "name": "story_category_title",
+                    "label": "Story Category Title",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_61806866edee6",
+                            "label": "Category Title",
+                            "name": "category_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_618068a6edee7": {
+                    "key": "layout_618068a6edee7",
+                    "name": "story",
+                    "label": "Story",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_618068c1edee8",
+                            "label": "Story Layout Type",
+                            "name": "story_layout_type_fc",
+                            "type": "flexible_content",
+                            "instructions": "Choose Whether to build Story <b>Dynamically<\/b>, or <b>Statically<\/b>.<br>\r\nIf you want to Override Story Title, Author, Featured Image, Description, or Link to Story from the one found on the actual story Choose <b>Static<\/b>.",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layouts": {
+                                "layout_618068ee9db8c": {
+                                    "key": "layout_618068ee9db8c",
+                                    "name": "dynamic",
+                                    "label": "Dynamic",
+                                    "display": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_61806bb5edee9",
+                                            "label": "Story",
+                                            "name": "story",
+                                            "type": "relationship",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "post_type": [
+                                                "post"
+                                            ],
+                                            "taxonomy": "",
+                                            "filters": [
+                                                "search",
+                                                "taxonomy"
+                                            ],
+                                            "elements": [
+                                                "featured_image"
+                                            ],
+                                            "min": 1,
+                                            "max": 1,
+                                            "return_format": "object"
+                                        },
+                                        {
+                                            "key": "field_618abdeeec02e",
+                                            "label": "Featured Image Width",
+                                            "name": "featured_image_width",
+                                            "type": "range",
+                                            "instructions": "Choose the Width of the Featured Image. Max is 690px.",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": 690,
+                                            "min": 0,
+                                            "max": 690,
+                                            "step": "",
+                                            "prepend": "",
+                                            "append": "px"
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                },
+                                "layout_61806c4aedeeb": {
+                                    "key": "layout_61806c4aedeeb",
+                                    "name": "static",
+                                    "label": "Static",
+                                    "display": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_61806c54edeec",
+                                            "label": "Title",
+                                            "name": "title",
+                                            "type": "wysiwyg",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "Story Title",
+                                            "tabs": "all",
+                                            "toolbar": "full",
+                                            "media_upload": 0,
+                                            "delay": 1
+                                        },
+                                        {
+                                            "key": "field_61806c98edeed",
+                                            "label": "Author",
+                                            "name": "author",
+                                            "type": "wysiwyg",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "By: Author's Name",
+                                            "tabs": "all",
+                                            "toolbar": "full",
+                                            "media_upload": 0,
+                                            "delay": 1
+                                        },
+                                        {
+                                            "key": "field_61806cdbedeee",
+                                            "label": "Featured Image",
+                                            "name": "featured_image",
+                                            "type": "image",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "return_format": "array",
+                                            "preview_size": "medium",
+                                            "library": "all",
+                                            "min_width": "",
+                                            "min_height": "",
+                                            "min_size": "",
+                                            "max_width": "",
+                                            "max_height": "",
+                                            "max_size": "",
+                                            "mime_types": ""
+                                        },
+                                        {
+                                            "key": "field_618abcf5329a4",
+                                            "label": "Featured Image Width",
+                                            "name": "featured_image_width",
+                                            "type": "range",
+                                            "instructions": "Choose the Width of the Featured Image. Max is 690px.",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": 690,
+                                            "min": 0,
+                                            "max": 690,
+                                            "step": "",
+                                            "prepend": "",
+                                            "append": "px"
+                                        },
+                                        {
+                                            "key": "field_61806d17edeef",
+                                            "label": "Description",
+                                            "name": "description",
+                                            "type": "wysiwyg",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "Story's Meta Description or Excerpt.",
+                                            "tabs": "all",
+                                            "toolbar": "full",
+                                            "media_upload": 1,
+                                            "delay": 1
+                                        },
+                                        {
+                                            "key": "field_61806d68edef0",
+                                            "label": "Link to Post",
+                                            "name": "link_to_post",
+                                            "type": "link",
+                                            "instructions": "<b>Link Text<\/b> does nothing here, use <b>Button Text<\/b> to Change the Button's Text",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "return_format": "url"
+                                        },
+                                        {
+                                            "key": "field_6194384220f1d",
+                                            "label": "Button Text",
+                                            "name": "button_text",
+                                            "type": "text",
+                                            "instructions": "Leave Blank to Remove Button",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "Read the full story here",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                }
+                            },
+                            "button_label": "Add Story",
+                            "min": "",
+                            "max": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Row",
+            "min": 1,
+            "max": ""
+        },
+        {
+            "key": "field_61808c5c0e2f5",
+            "label": "Link to Template Front-End",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<div style=\"text-align:right;\">\r\n\t<div>\r\n\t\t<input type=\"submit\" class=\"metabox_submit button button-primary button-large\" accesskey=\"p\" value=\"Update\" style=\"font-size: 20px;font-weight: bold;margin:0 .5em\" \/> <a href=\"\/wp-admin\/admin.php?page=foc-email-blast\" target=\"_blank\" class=\"button button-primary button-large\" style=\"font-size: 20px;font-weight: bold;margin:0 .5em\">View Template<\/a>\r\n\t<\/div>\r\n\t<div>\r\n\t\t<p style=\"font-size:25px;\">Remember to <b>Update to Save<\/b><\/p>\r\n\t<\/div>\r\n<\/div>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "foc-site-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1661304344
+}
