@@ -90,8 +90,9 @@ if ( true === $fullscreen_header ) {
 			if ( have_posts() ) :
 				while ( have_posts() ) :
 					the_post();
-					foc_set_post_views( get_the_ID() );
-					foc_get_post_views( get_the_ID() );
+					$post_id = get_the_ID();
+					foc_set_post_views( $post_id );
+					foc_get_post_views( $post_id );
 					get_template_part( 'includes/partials/single-post/post-content' );
 				endwhile;
 			endif;
@@ -163,6 +164,12 @@ if ( true === $fullscreen_header ) {
 			</div>   
 
 		</div><!--/row-->
+
+		<?php if ( is_active_sidebar( 'after-single-post' ) ) : ?>
+			<div id="after-single-post-wrapper" class="row">
+				<?php dynamic_sidebar( 'after-single-post' ) ?>
+			</div><!--/row-->
+		<?php endif; // endif ( is_active_sidebar( 'after-single-post' ) ) : ?>
 
 	</div><!--/container main-content-->
 
