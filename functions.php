@@ -662,3 +662,10 @@ function foc_keep_users_logged_in_longer( $expirein ) {
 	return $duration;
 }
 add_filter( 'auth_cookie_expiration', 'foc_keep_users_logged_in_longer' );
+
+function foc_remove_add_listen_button_if_not_logged_in() {
+	if ( ! is_user_logged_in() ) :
+		remove_filter( 'the_content', 'add_listen_button' );
+	endif;
+}
+add_action( 'init', 'remove_add_listen_button_if_not_logged_in' );
